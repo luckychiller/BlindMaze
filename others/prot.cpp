@@ -71,6 +71,7 @@ void setcursor(bool visible, DWORD size)
     SetConsoleCursorInfo(console, &lpCursor);
 }
 
+
 void fordelay(int j)
 {
     int i, k;

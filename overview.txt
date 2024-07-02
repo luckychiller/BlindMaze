@@ -1,13 +1,23 @@
 App
+    Login/SignUp
     intro video
     Menu
-        New Game
-            Load From Computer
-            Load From Cloud
-        Level
+        Play
+        How to Play
         Settings
             Sound
             Theme
-        About Us    
+        About Us 
+        Account  
+            Innitials Image
+            Name
+            Email
+            Rank
+            Points
+            Level
+            Change Password
+            Delete Account
+            Back 
         Exit
+            (save before you exit)
         
