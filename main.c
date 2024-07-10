@@ -1,16 +1,9 @@
 #include <stdio.h>
-#include "pages/IntroVideo.h"
-#include "utils/Credentials.h"
-#include "pages/Menu.h"
-#include "pages/Play.h"
-#include "pages/Levels.h"
-#include "pages/HighScores.h"
-#include "pages/HowToPlay.h"
-#include "pages/Account.h"
-#include "pages/Exit.h"
-
+#include "components/functions.h"
 int main()
 {
+    console = GetStdHandle(STD_OUTPUT_HANDLE);
+    console_color = GetStdHandle(STD_OUTPUT_HANDLE);
     int GamePlay = 1;
     IntroVideo();
     CredentialCheck();
