@@ -93,10 +93,11 @@ void MoveRight()
     }
 }
 
-void SaveData(char* file_name)
+void SaveData(char *file_name)
 {
     FILE *fp = fopen(file_name, "w");
-    if (fp == NULL) {
+    if (fp == NULL)
+    {
         perror("Error opening file");
         return;
     }
@@ -112,19 +113,20 @@ void SaveData(char* file_name)
     fclose(fp);
 }
 
-void LoadMaze(const char* file_path)
+void LoadMaze(const char *file_path)
 {
     FILE *fp = fopen(file_path, "r");
-    if (fp == NULL) {
+    if (fp == NULL)
+    {
         perror("Error opening file");
-        
     }
 
-    for (int i = 0; i < HEIGHT; i++) {
-        if (fgets(maze[i], WIDITH + 1, fp) == NULL) {
+    for (int i = 0; i < HEIGHT; i++)
+    {
+        if (fgets(maze[i], WIDITH + 1, fp) == NULL)
+        {
             perror("Error reading file");
             fclose(fp);
-           
         }
         maze[i][strcspn(maze[i], "\n")] = '\0'; // Remove the newline character, if any
     }
@@ -147,7 +149,7 @@ void PrintMaze()
                 }
                 else
                 {
-                    switch (maze[i][j]) 
+                    switch (maze[i][j])
                     {
                     case '#':
                         gotoxy(j, i);
@@ -183,12 +185,15 @@ void IntroVideo()
     printf("Make sure the app is in full screen mode.!!!\n\n\n\n");
     system("pause");
     system("cls");
+    system("python library/intro_Logo.py | python -m terminaltexteffects beams");
+    system("pause");
+    system("cls");
 }
 
 void Play()
 {
     int k = 1;
-    
+
     LoadMaze("../others/intro_vid_maze.txt");
 
     system("cls");
@@ -233,12 +238,12 @@ void Account()
 
 void CredentialCheck()
 {
-return;
+    return;
 }
 
 int Exit()
 {
-   return 0; 
+    return 0;
 }
 
 void HighScores()
@@ -260,20 +265,3 @@ int Menu()
 {
     return 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
